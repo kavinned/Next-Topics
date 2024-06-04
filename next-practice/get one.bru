@@ -1,0 +1,18 @@
+meta {
+  name: get one
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:3000/api/topics/665af121308d4211957f674f
+  body: none
+  auth: none
+}
+
+body:json {
+  {
+    "title": "html",
+    "description": "A markup language for websites"
+  }
+}

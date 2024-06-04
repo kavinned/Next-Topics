@@ -1,0 +1,18 @@
+meta {
+  name: update
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://localhost:3000/api/topics/665af121308d4211957f674f
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "title": "Python",
+    "description": "Not Vue"
+  }
+}

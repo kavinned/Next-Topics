@@ -1,0 +1,22 @@
+meta {
+  name: delete one
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http://localhost:3000/api/topics?id=665aefff308d4211957f6742
+  body: none
+  auth: none
+}
+
+query {
+  id: 665aefff308d4211957f6742
+}
+
+body:json {
+  {
+    "title": "html",
+    "description": "A markup language for websites"
+  }
+}

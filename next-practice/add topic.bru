@@ -1,0 +1,18 @@
+meta {
+  name: add topic
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/api/topics
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "title": "Vue",
+    "description": "A markup language for websites"
+  }
+}
