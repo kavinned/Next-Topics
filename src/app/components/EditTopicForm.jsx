@@ -18,13 +18,20 @@ export default function EditTopicForm({ id, title, description }) {
 			return;
 		}
 		try {
-			const res = await fetch(`http://localhost:3000/api/topics/${id}`, {
-				method: "PUT",
-				headers: { "Content-type": "application/json" },
-				body: JSON.stringify({ title: newTitle, description: newDescription }),
-			});
+			const res = await fetch(
+				`${process.env.NEXT_PUBLIC_BASE_URL}/api/topics/${id}`,
+				{
+					method: "PUT",
+					headers: { "Content-type": "application/json" },
+					body: JSON.stringify({
+						title: newTitle,
+						description: newDescription,
+					}),
+				}
+			);
 			if (res.ok) {
 				router.push("/");
+				router.refresh();
 			} else {
 				throw new Error("Failed to update topic");
 			}
